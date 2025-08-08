@@ -1,0 +1,111 @@
+/* Base styling */
+body {
+  background: #20232a;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.scene {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  background: #2b2b2b;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+/* Stairs */
+.staircase {
+  position: absolute;
+  bottom: 0;
+  left: 120px;
+}
+
+.step {
+  position: absolute;
+  width: 120px;
+  height: 20px;
+  background: linear-gradient(to bottom, #666, #444);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+  border-radius: 4px;
+  transition: transform 0.5s ease;
+}
+
+.step[data-index="0"] { bottom: 0px; }
+.step[data-index="1"] { bottom: 30px; }
+.step[data-index="2"] { bottom: 60px; }
+.step[data-index="3"] { bottom: 90px; }
+.step[data-index="4"] { bottom: 120px; }
+
+/* Man (Stick figure) */
+.man {
+  position: absolute;
+  left: 30px;
+  bottom: 10px;
+  width: 20px;
+  height: 60px;
+  z-index: 10;
+  transition: bottom 0.6s ease, left 0.6s ease;
+}
+
+.man .head {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.man .body {
+  width: 4px;
+  height: 25px;
+  background: #fff;
+  margin: 0 auto;
+}
+
+.man .left-leg,
+.man .right-leg {
+  width: 4px;
+  height: 15px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+}
+
+.left-leg {
+  left: 2px;
+}
+
+.right-leg {
+  right: 2px;
+}
+
+/* Controls */
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  background: #5e81ac;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #81a1c1;
+}
