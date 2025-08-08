@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Realistic Hydraulic Staircase</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>🔧  Hydraulic Staircase</h1>
+
+  <div class="scene">
+    <div class="staircase" id="staircase">
+      <!-- Stairs -->
+      <div class="step" data-index="0"></div>
+      <div class="step" data-index="1"></div>
+      <div class="step" data-index="2"></div>
+      <div class="step" data-index="3"></div>
+      <div class="step" data-index="4"></div>
+    </div>
+
+    <!-- Stickman -->
+    <div class="man" id="man">
+      <div class="head"></div>
+      <div class="body"></div>
+      <div class="left-leg"></div>
+      <div class="right-leg"></div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button onclick="startWalk()">Start Walk</button>
+    <button onclick="resetAll()">Reset</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

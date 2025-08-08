@@ -46,10 +46,18 @@ function walk() {
 
 function moveToStep(index) {
   const step = steps[index];
-  const stepBottom = parseInt(window.getComputedStyle(step).bottom);
+  const stepStyles = window.getComputedStyle(step);
+  const stepBottom = parseInt(stepStyles.bottom);
+
+  // Get the center of the step relative to the parent
+  const stepRect = step.getBoundingClientRect();
+  const parentRect = step.parentElement.getBoundingClientRect();
+  const manWidth = man.offsetWidth;
+
+  const centeredLeft = stepRect.left - parentRect.left + (step.offsetWidth / 2) - (manWidth / 2);
 
   man.style.bottom = `${stepBottom + 10}px`;
-  man.style.left = "60px";
+  man.style.left = `${centeredLeft}px`;
 }
 
 function sinkStep(index) {
